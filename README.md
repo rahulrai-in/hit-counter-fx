@@ -10,7 +10,7 @@
 
 Visitor Counter Badge is a simple open-source utility you can use to display the number of visitors on a web page, repository, or profile. Every request to render the visitor count badge invokes an HTTP-triggered Azure function that dynamically generates an SVG image that you can apply on a web page, profile page, or repository. You can host this service on your Azure subscription by using the [ARM deployment button](#self-hosting) below.
 
-If you are further interested in learning the internals of this service, please read the Visitor Counter Badge article on my blog (_Coming soon_), The Cloud Blog. While you are there, please consider subscribing to my mailing list to receive updates on new articles on Cloud-Native and Kubernetes.
+If you are further interested in learning the internals of this service, please read the [Visitor Counter Badge article on my blog](https://thecloudblog.net/lab/serverless-visitor-counter-badge-with-azure-functions/). While you are there, please consider subscribing to my mailing list to receive updates on new articles on Cloud-Native and Kubernetes.
 
 ## Get in touch
 
@@ -34,7 +34,7 @@ To use this badge, you first need to register a username. To do that, use an HTT
 curl -X POST -d "" 'https://badge.tcblab.net/api/hitcounter/[Your Username]'
 ```
 
->**Note**: Your username must not be longer than 10 characters in length and must only contain alphanumeric characters.
+> **Note**: Your username must not be longer than 10 characters in length and must only contain alphanumeric characters.
 
 This request will return either of the following two responses.
 
@@ -48,10 +48,12 @@ This request will return either of the following two responses.
 A page is uniquely identified through a page identifier (case insensitive) and your username. You can use any unique string to identify your page within your account. The most common choices are the title of the page, a number, or a GUID. Once you select an identifier, you can apply the badge on an HTML page, such as a blog post, using the following code.
 
 ```html
-<img src="https://badge.tcblab.net/api/hitcounter/[Your Username]/[Page Identifier]" />
+<img
+  src="https://badge.tcblab.net/api/hitcounter/[Your Username]/[Page Identifier]"
+/>
 ```
 
->**Note**: Your page identifier must be less than 50 characters in length and only contain alphanumeric characters, hyphens (-), and underscore (_).
+> **Note**: Your page identifier must be less than 50 characters in length and only contain alphanumeric characters, hyphens (-), and underscore (\_).
 
 If you want to apply the badge on a markdown file such as README.md or your GitHub profile, use the following code.
 
