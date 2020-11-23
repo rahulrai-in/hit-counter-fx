@@ -19,7 +19,7 @@ namespace RR.AZLabs.HitCounter
 {
     public class Function
     {
-        private const string FxName = "hc";
+        private const string FxName = "hitcounter";
         private const string UserListPk = "User";
         private const string ImageFile = "RR.AZLabs.HitCounter.image.svg";
         private const string RecordStore = "hitcounterstore";
@@ -41,7 +41,7 @@ namespace RR.AZLabs.HitCounter
 
         [FunctionName(FxName)]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = FxName + "/{user}/{pageId?}")]
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "hc/{user}/{pageId?}")]
             Options options,
             string user,
             string pageId,
