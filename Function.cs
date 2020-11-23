@@ -19,7 +19,7 @@ namespace RR.AZLabs.HitCounter
 {
     public class Function
     {
-        private const string FxName = "hitcounter";
+        private const string FxName = "hc";
         private const string UserListPk = "User";
         private const string ImageFile = "RR.AZLabs.HitCounter.image.svg";
         private const string RecordStore = "hitcounterstore";
