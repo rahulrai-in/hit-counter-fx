@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="#">
-    <img src="https://badge.tcblab.net/api/hc/rahul/badge"/>
+    <img src="https://badge.tcblabs.net/api/hc/rahul/badge"/>
   </a>
 </p>
 
@@ -31,7 +31,7 @@ I love reading tweets. Send me your tweets, or connect with me via my blog - The
 To use this badge, you first need to register a username. To do that, use an HTTP client of your choice, such as cURL or POSTMAN, to make a POST request to the following endpoint.
 
 ```sh
-curl -X POST -d "" 'https://badge.tcblab.net/api/hc/[Your Username]'
+curl -X POST -d "" 'https://badge.tcblabs.net/api/hc/[Your Username]'
 ```
 
 > **Note**: Your username must not be longer than 10 characters in length and must only contain alphanumeric characters.
@@ -48,7 +48,7 @@ This request will return either of the following two responses.
 A page is uniquely identified through a page identifier (case insensitive) and your username. You can use any unique string to identify your page within your account. The most common choices are the title of the page, a number, or a GUID. Once you select an identifier, you can apply the badge on an HTML page, such as a blog post, using the following code.
 
 ```html
-<img src="https://badge.tcblab.net/api/hc/[Your Username]/[Page Identifier]" />
+<img src="https://badge.tcblabs.net/api/hc/[Your Username]/[Page Identifier]" />
 ```
 
 > **Note**: Your page identifier must be less than 50 characters in length and only contain alphanumeric characters, hyphens (-), and underscore (\_).
@@ -56,7 +56,7 @@ A page is uniquely identified through a page identifier (case insensitive) and y
 If you want to apply the badge on a markdown file such as README.md or your GitHub profile, use the following code.
 
 ```markdown
-![](https://badge.tcblab.net/api/hc/[Your Username]/[Page Identifier])
+![](https://badge.tcblabs.net/api/hc/[Your Username]/[Page Identifier])
 ```
 
 ## Configurations
@@ -64,19 +64,19 @@ If you want to apply the badge on a markdown file such as README.md or your GitH
 Most of the aspects of the badge are configurable. The configuration settings are read from the query string as follows.
 
 ```plaintext
-https://badge.tcblab.net/api/hc/[Your Username]/[Page Identifier]?[OptionKey1]=[Value]&[OptionKey2]=[Value]...
+https://badge.tcblabs.net/api/hc/[Your Username]/[Page Identifier]?[OptionKey1]=[Value]&[OptionKey2]=[Value]...
 ```
 
 Following is the list of supported parameters. See the [raw view of the README file](/main/README.md) for the query string values used in the examples below.
 
-| Parameter name          | Supported values                 | What it does                                                | Example                                                                                              |
-| ----------------------- | -------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| IconBackgroundColorCode | Color name or hex code (incl. #) | Specify the background color of the label (left)            | ![](https://badge.tcblab.net/api/hc/rahul/badge-demo?NoCount=true&IconBackgroundColorCode=red)       |
-| EyeColorCode            | Color name or hex code (incl. #) | Specify the color of the eye icon (left)                    | ![](https://badge.tcblab.net/api/hc/rahul/badge-demo?NoCount=true&EyeColorCode=%23FF00FF)            |
-| TextBackgroundColorCode | Color name or hex code (incl. #) | Specify the background color of the label (right)           | ![](https://badge.tcblab.net/api/hc/rahul/badge-demo?NoCount=true&TextBackgroundColorCode=%2398FB98) |
-| TextColorCode           | Color name or hex code (incl. #) | Specify the color of the counter (right)                    | ![](https://badge.tcblab.net/api/hc/rahul/badge-demo?NoCount=true&TextColorCode=black)               |
-| NoCount                 | true (default) or false          | Display the count without incrementing the counter          | ![](https://badge.tcblab.net/api/hc/rahul/badge-demo?NoCount=true&test=1)                            |
-| IsKmbFormat             | true (default) or false          | Format large numbers as K(Kilo), M(Million), and B(Billion) | ![](https://badge.tcblab.net/api/hc/rahul/badge-demo-kmb?NoCount=true&IsKmbFormat=false)             |
+| Parameter name          | Supported values                 | What it does                                                | Example                                                                                               |
+| ----------------------- | -------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| IconBackgroundColorCode | Color name or hex code (incl. #) | Specify the background color of the label (left)            | ![](https://badge.tcblabs.net/api/hc/rahul/badge-demo?NoCount=true&IconBackgroundColorCode=red)       |
+| EyeColorCode            | Color name or hex code (incl. #) | Specify the color of the eye icon (left)                    | ![](https://badge.tcblabs.net/api/hc/rahul/badge-demo?NoCount=true&EyeColorCode=%23FF00FF)            |
+| TextBackgroundColorCode | Color name or hex code (incl. #) | Specify the background color of the label (right)           | ![](https://badge.tcblabs.net/api/hc/rahul/badge-demo?NoCount=true&TextBackgroundColorCode=%2398FB98) |
+| TextColorCode           | Color name or hex code (incl. #) | Specify the color of the counter (right)                    | ![](https://badge.tcblabs.net/api/hc/rahul/badge-demo?NoCount=true&TextColorCode=black)               |
+| NoCount                 | true (default) or false          | Display the count without incrementing the counter          | ![](https://badge.tcblabs.net/api/hc/rahul/badge-demo?NoCount=true&test=1)                            |
+| IsKmbFormat             | true (default) or false          | Format large numbers as K(Kilo), M(Million), and B(Billion) | ![](https://badge.tcblabs.net/api/hc/rahul/badge-demo-kmb?NoCount=true&IsKmbFormat=false)             |
 
 > **Note**: Do not use the symbol `#` in the value of the query string parameter. Use the URL encoded value `%23` instead.
 
